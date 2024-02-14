@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Tool</title>
+    <link rel="stylesheet" href="../css/updateTool.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="left">
+                <a href="index.html">Home</a>
+                <a href="#">Reservation</a>
+            </div>
+            <div class="right">
+                <a href="signIn.html">Staff Login</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Update Tool</h1>
+        <form id="updateForm">
+            <div class="form-group">
+                <label for="toolName">Tool Name</label>
+                <input type="text" id="toolName" name="toolName" required>
+            </div>
+            <div class="form-group">
+                <label for="toolDescription">Tool Description</label>
+                <input type="text" id="toolDescription" name="toolDescription" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <select id="location" name="location" required>
+                    <!-- Options will be populated dynamically with JavaScript -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="borrowingPrice">Borrowing Price per Day</label>
+                <input type="number" id="borrowingPrice" name="borrowingPrice" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" name="status" required>
+                    <option value="Available">Available</option>
+                    <option value="Not Available">Not Available</option>
+                </select>
+            </div>
+            <button type="submit">UPDATE</button>
+        </form>
+    </div>
+    <script src="../js/updateTool.js"></script>
+</body>
+</html>
