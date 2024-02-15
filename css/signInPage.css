@@ -21,7 +21,7 @@ body {
 }
 
 .logo img {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
 }
 
@@ -79,4 +79,12 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.logo {
+  background: linear-gradient(to top, #0D2644 0%, #1A3B60 100%);
+}
+
+.logo img {
+  max-width: 60rem;
 }
