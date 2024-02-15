@@ -188,11 +188,13 @@ img.tool-image {
     height: auto;
     object-fit: contain;
     order: 10;
+    cursor: pointer;
 }
 
 span.tool-price {
     color: #d9d9d9;
 }
+
 
 span.tool-status.available {
     color: lightgreen;
