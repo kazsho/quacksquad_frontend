@@ -1,4 +1,20 @@
 const searchEndpoint = "http://localhost:3000/tools/search?search="
+const randomEndpoint = "http://localhost:3000/tools/random"
+
+window.addEventListener('load', async function() {
+    await fetchRandomData();
+});
+
+async function fetchRandomData() {
+    try {
+        const response = await fetch(randomEndpoint);
+        const data = await response.json();
+        renderDOM(data);
+    } catch (err) {
+        console.error(err);
+    }
+}
+
 
 document.getElementById('toolForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -54,7 +70,7 @@ function renderDOM(tools) {
 
         const toolPrice = document.createElement('div');
         toolPrice.classList.add('tool-price');
-        toolPrice.textContent = `Price: ${tool.price}`;
+        toolPrice.textContent = tool.price_per_day;
         toolDetails.appendChild(toolPrice);
 
         toolBox.appendChild(toolDetails);
