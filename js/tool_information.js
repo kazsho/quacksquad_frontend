@@ -1,19 +1,32 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Simulate fetching data from the backend
-    const toolData = {
-        name: "Electric Drill",
-        imageUrl: "https://m.media-amazon.com/images/I/51DdYAXA93L._AC_SL1000_.jpg",
-        availability: "Available",
-        address: "123 blabla St, bl1 6bl",
-        details: "This is a powerful electric drill, suitable for a variety of drilling and screwdriving tasks."
-    };
+const toolEndpoint = "http://localhost:3000/tools/"
+const locationEndpoint = "http://localhost:3000/locations/"
 
-    // Update the page with the tool data
-    document.getElementById('toolName').textContent = toolData.name;
-    const imgElement = document.createElement('img');
-    imgElement.src = toolData.imageUrl;
-    document.getElementById('toolImageContainer').appendChild(imgElement);
-    document.getElementById('availabilityStatus').textContent = `Status: ${toolData.availability}`;
-    document.getElementById('address').textContent = `Location: ${toolData.address}`;
-    document.getElementById('toolDetails').textContent = toolData.details;
-});
+document.addEventListener('DOMContentLoaded', async function() {
+    const toolId = 7 //needs to be retrieved dynamically 
+    const toolDataResponse = await fetch(toolEndpoint + toolId)
+    const toolData = await toolDataResponse.json()
+
+    const locationId = toolData.location_id
+    const locationDataResponse = await fetch(locationEndpoint + locationId)
+    const locationData = await locationDataResponse.json()
+
+    updateToolInfo(toolData, locationData)
+})
+
+const updateToolInfo = (toolData, locationData) => {
+    document.getElementById('toolName').textContent = toolData.tool_name
+
+    const imgElement = document.createElement('img')
+    imgElement.src = toolData.image_url
+    
+    document.getElementById('toolImageContainer').appendChild(imgElement)
+
+    document.getElementById('availabilityStatus').textContent = `Status: ${toolData.status.toUpperCase()}`;
+    document.getElementById('toolDetails').textContent = toolData.description;
+
+    const addressElement = document.getElementById('address')
+    addressElement.textContent = `Address: ${locationData.street_address}`
+    const postCodeElement = document.createElement('div')
+    postCodeElement.textContent = `Post Code: ${locationData.post_code}`
+    addressElement.appendChild(postCodeElement)
+}
