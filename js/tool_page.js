@@ -1,17 +1,23 @@
+const searchEndpoint = "http://localhost:3000/tools/search?search="
+
 document.getElementById('toolForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const toolName = document.getElementById('toolName').value;
-    fetchTools(toolName);
+    fetchSearchData(toolName);
 });
 
-function fetchTools(toolName) {
-    // Simulated data for demonstration purposes
-    const tools = [
-        { name: "Hammer", image: "hammer.jpg", status: "Available", description: "A tool used for driving nails and breaking objects.", price: "$5 per day" },
-        { name: "Screwdriver", image: "screwdriver.jpg", status: "Available", description: "A tool used for turning screws.", price: "$3 per day" },
-        { name: "Drill", image: "drill.jpg", status: "Not Available", description: "A tool used for drilling holes in various materials.", price: "$10 per day" }
-    ];
+async function fetchSearchData(searchValue){
+    try{
+        const response = await fetch(searchEndpoint + encodeURIComponent(searchValue))
+        const data = await response.json()
+        console.log(data)
+        renderDOM(data) 
+    }catch(err){
+        console.error(err)
+    }
+}
 
+function renderDOM(tools) {
     const toolList = document.getElementById('toolList');
     toolList.innerHTML = ''; // Clear previous list
 
@@ -23,16 +29,17 @@ function fetchTools(toolName) {
         toolBox.classList.add('tool-box');
 
         const toolImage = document.createElement('img');
-        toolImage.src = `images/${tool.image}`; // Assuming images are stored in an 'images' folder
-        toolImage.alt = tool.name;
-        toolBox.appendChild(toolImage);
+        console.log(tool.image_url)
+        toolImage.src = tool.image_url; // Assuming 'image_URL' property contains the URL of the image
+        //toolImage.alt = tool.image_alt; // Assuming 'image_alt' is the alt text for the image, adjust this based on your backend data
+        toolBox.appendChild(toolImage); 
 
         const toolDetails = document.createElement('div');
         toolDetails.classList.add('tool-details');
 
         const toolNameElement = document.createElement('div');
         toolNameElement.classList.add('tool-name');
-        toolNameElement.textContent = tool.name;
+        toolNameElement.textContent = tool.tool_name;
         toolDetails.appendChild(toolNameElement);
 
         const toolStatus = document.createElement('div');
