@@ -7,10 +7,19 @@
     "test": "jest --verbose",
     "coverage": "jest --coverage"
   },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testPathIgnorePatterns": [
+      "./__tests__/helpers/*"
+    ],
+    "setupFiles": ["./__tests__/jest.setup.js"]
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^24.0.0"
   }
 }
+
