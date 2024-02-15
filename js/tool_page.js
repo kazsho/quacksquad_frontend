@@ -1,4 +1,5 @@
 const searchEndpoint = "http://localhost:3000/tools/search?search="
+
 const randomEndpoint = "http://localhost:3000/tools/random"
 
 window.addEventListener('load', async function() {
@@ -14,7 +15,6 @@ async function fetchRandomData() {
         console.error(err);
     }
 }
-
 
 document.getElementById('toolForm').addEventListener('submit', function(event) {
     event.preventDefault();
