@@ -1,3 +1,66 @@
-/*
-add reservation stuff here
-*/
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    background-color: #4F5D75;
+    padding: 10px 0;
+  }
+  
+  .header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .header nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .header nav ul li a.active {
+    font-weight: bold;
+  }
+  
+  .reservation {
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  .reservation h1 {
+    margin-bottom: 20px;
+  }
+  
+  .reservation label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .reservation input[type="text"],
+  .reservation input[type="email"],
+  .reservation input[type="tel"],
+  .reservation input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .reservation button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: rgb(105, 97, 97);
+    cursor: pointer;
+  }
+  
+  .reservation button:hover {
+    background-color: #007F7D;
+  }

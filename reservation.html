@@ -1,1 +1,50 @@
-<!--Add reservation html here-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation Page</title>
+  <link rel="stylesheet" href="/css/reservation.css">
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="active">Reservation</a></li>
+        <li><a href="signIn.html">Log in</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="reservation">
+    <h1>Reservation</h1>
+    <form id="reservationForm">
+      <label for="toolID">Tool ID:</label>
+      <input type="text" id="toolID" name="toolID" required><br>
+
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required><br>
+
+      <label for="email">Email address:</label>
+      <input type="email" id="email" name="email" required><br>
+
+      <label for="phoneNumber">Phone number:</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+
+      <div>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" required>
+      </div>
+      <div>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" required>
+      </div>
+
+      <button type="submit" id="submitReservation">Submit Reservation</button>
+    </form>
+  </section>
+
+  <script src="/js/reservation.js"></script>
+</body>
+</html>
