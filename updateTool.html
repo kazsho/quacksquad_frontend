@@ -4,23 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Tool</title>
-    <link rel="stylesheet" href="../css/updateTool.css">
+    <link rel="stylesheet" href="css/updateTool.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="left">
-                <a href="index.html">Home</a>
-                <a href="#">Reservation</a>
-            </div>
-            <div class="right">
-                <a href="signIn.html">Staff Login</a>
-            </div>
-        </div>
-    </header>
+    <header class="header">
+        <nav class="primary-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="#" class="active">Reservation</a></li> -->
+            <li><a href="signIn.html">Staff Login</a></li>
+          </ul>
+        </nav>
+      </header>
     <div class="container">
         <h1>Update Tool</h1>
-        <form id="updateForm">
+        <form id="updateForm" class="update-form">
             <div class="form-group">
                 <label for="toolName">Tool Name</label>
                 <input type="text" id="toolName" name="toolName" required>
@@ -46,9 +44,9 @@
                     <option value="Not Available">Not Available</option>
                 </select>
             </div>
-            <button type="submit">UPDATE</button>
+            <button type="submit" class="update-button">Update</button>
         </form>
     </div>
-    <script src="../js/updateTool.js"></script>
+    <script src="js/updateTool.js"></script>
 </body>
 </html>
