@@ -5,31 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tool Details</title>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/tool_information.css">
+    <link rel="stylesheet" href="css/tool_information.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="primary-nav">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Reservation</a></li>
-                <li><a href="signIn.html">Log in</a></li>
+                <li><a href="signIn.html">Staff Login</a></li>
             </ul>
         </nav>
     </header>
     <main>
     <div id="toolContainer">
         <h1 id="toolName"></h1>
+        <span id="price-per-day"></span>
         <div class="row">
             <div class="column" id="toolImageContainer">
                 <!-- Tool image will be inserted here -->
             </div>
             <div class="column">
-                <p id="availabilityStatus"></p>
+                <span id="availabilityStatus" class="tool-status"></span>
                 <div id="addressContainer">
                     <p id="address"></p>
                 </div>
-                <button id="reserveButton">Reserve</button>
+                <button id="reserveButton" class="reserve-button">Reserve</button>
             </div>
         </div>
         <h2>Details</h2>
@@ -39,6 +40,6 @@
     </div>
     </main>
 
-    <script src="../js/tool_information.js"></script>
+    <script src="js/tool_information.js"></script>
 </body>
 </html>

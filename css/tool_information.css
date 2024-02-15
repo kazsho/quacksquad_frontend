@@ -1,5 +1,8 @@
-body {
+body, button {
     font-family: 'Overpass', sans-serif;
+}
+
+body {
     margin: 0;
     background-color: #ffffff;
 }
@@ -59,11 +62,12 @@ nav ul li a:hover {
 #addressContainer {
     border: 2px solid #2D3142;
     padding: 10px;
-    margin-bottom: 10px; /* Added margin for spacing */
+    margin-bottom: 10px;
+    /* Added margin for spacing */
 }
 
 #reserveButton {
-    background-color: #F08700;
+    /* background-color: #F08700; */
     color: white;
     border: none;
     padding: 10px 20px;
@@ -80,4 +84,59 @@ nav ul li a:hover {
     padding: 20px;
     margin-top: 10px;
     border-radius: 10px;
+}
+
+/* Alex additions from here -- Thursday PM */
+main {
+    max-width: 800px;
+    margin: auto;
+}
+
+nav.primary-nav ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/* Last list item on the right */
+nav.primary-nav ul li:last-child {
+    margin-left: auto;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.row {
+    gap: 6rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+button.reserve-button {
+    border-radius: 3rem;
+    background-color: #ef8354;
+    box-shadow: lightgrey 0rem 0.5rem 1rem 0rem;
+}
+
+.details {
+    background-color: #F1F2F4;
+}
+
+span.tool-status {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+
+span.tool-status.available {
+    color: rgb(105, 168, 105);
+}
+
+span.tool-status.unavailable {
+    color: #ff6666;
 }
