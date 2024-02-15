@@ -1,38 +1,43 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff; /* Specify your desired background color */
+/* Webfont */
+body,
+input,
+button {
+    font-family: "Overpass", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #272B3A;
 }
 
-header {
-    background-color: #4F5D75; /* Header background color */
-    color: #fff;
+body {
+    margin: 0;
+}
+
+.header {
+    background-color: #4F5D75;
     padding: 10px 0;
 }
 
 .container {
-    max-width: 800px;
+    /* width: 80%; */
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
 }
 
-.left {
-    float: left;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
 }
 
-.right {
-    float: right;
-}
-
-a {
-    color: #fff;
+header .container a {
+    color: #FFFFFF;
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 h1 {
-    color: #272B3A;
+    /* color: #009E9C; */
 }
 
 .form-group {
@@ -41,7 +46,7 @@ h1 {
 
 label {
     display: block;
-    color: #272B3A;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -49,14 +54,13 @@ input[type="number"],
 select {
     width: 100%;
     padding: 10px;
-    border: 2px solid #272B3A; /* Field border color */
+    border: 2px solid #272B3A;
     border-radius: 5px;
-    box-sizing: border-box;
 }
 
 button {
-    background-color: #009E9C; /* Submit button color */
-    color: #fff;
+    background-color: #009E9C;
+    color: #FFFFFF;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -64,10 +68,78 @@ button {
 }
 
 button:hover {
-    background-color: #007f7d; /* Hover color for submit button */
+    background-color: #007F7D;
 }
 
-#imageName {
+/* Alex HF additions -- Thurs PM */
+
+nav.primary-nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Last list item on the right */
+nav.primary-nav ul li:last-child {
+    margin-left: auto;
+}
+
+.header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
     display: block;
-    margin-top: 5px;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    background-color: #3b475e;
+}
+
+h1 {
+    margin-top: 3rem;
+    font-size: 3rem;
+}
+
+form.update-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+form.update-form input {
+    width: calc(100% - 1.5rem);
+}
+
+/* select {
+
+} */
+
+
+/* .reservation input[type="date"],
+select {
+    width: calc(100% - 1.2rem);
+} */
+
+button.submit-button {
+    align-self: flex-end;
+    margin-top: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+}
+
+button.submit-button:hover {
+    background-color: #007F7D;
+    color: white;
+}
+
+.mb-2 {
+    margin-bottom: 2rem;
 }
