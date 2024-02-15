@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Specify your desired background color */
+}
+
+header {
+    background-color: #4F5D75; /* Header background color */
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+h1 {
+    color: #272B3A;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    color: #272B3A;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #272B3A; /* Field border color */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #009E9C; /* Submit button color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007f7d; /* Hover color for submit button */
+}
+
+#imageName {
+    display: block;
+    margin-top: 5px;
+}

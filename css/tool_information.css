@@ -1,0 +1,83 @@
+body {
+    font-family: 'Overpass', sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #4F5D75;
+    padding: 10px 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    background-color: #3b475e;
+}
+
+#toolName {
+    color: #2D3142;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.column {
+    flex: 50%;
+    padding: 10px;
+}
+
+#toolImageContainer img {
+    width: 100%;
+    height: auto;
+}
+
+#addressContainer {
+    border: 2px solid #2D3142;
+    padding: 10px;
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+#reserveButton {
+    background-color: #F08700;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#reserveButton:hover {
+    background-color: #c76e00;
+}
+
+.details {
+    background-color: #BFC0C0;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
