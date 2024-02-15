@@ -1,11 +1,16 @@
 body {
+    box-sizing: border-box;
+}
+
+body {
     /* font-family: Arial, sans-serif; */
     margin: 0;
     padding: 0;
 }
 
 /* Webfont */
-body, input {
+body,
+input {
     font-family: "Overpass", sans-serif;
     font-optical-sizing: auto;
     /* font-weight: <weight>; */
@@ -25,7 +30,7 @@ header a {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 20px auto;
     padding: 0 20px;
 }
@@ -115,23 +120,37 @@ li:last-child {
 
 /* Alex additions from here -- Thursday PM */
 
+nav.primary-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #4F5D75;
+    color: #fff;
+}
+
+nav.primary-nav a:hover {
+    color: #ef8354;
+    text-decoration: none;
+}
+
 form.search-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-
+    margin-bottom: 4rem;
 }
 
 input.search-input {
-    width: 100%;
+    width: calc(100% - 3.75rem);
     padding: 1.5rem;
     border: 0.2rem #44526A solid;
     border-radius: 3rem;
 
     text-align: center;
     font-size: 1.5rem;
-    
+
 }
 
 form.search-form button {
@@ -139,4 +158,46 @@ form.search-form button {
     background-color: #ef8354;
     color: #fff;
     border-radius: 3rem;
+}
+
+.tool-item {
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.tool-box {
+    display: flex;
+    gap: 2rem;
+}
+
+.tool-details {
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+
+h2.tool-name {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+}
+
+img.tool-image {
+    width: 25%;
+    height: auto;
+    object-fit: contain;
+    order: 10;
+}
+
+span.tool-price {
+    color: #d9d9d9;
+}
+
+span.tool-status.available {
+    color: lightgreen;
+}
+
+span.tool-status.unavailable {
+    color: #ff6666;
 }
