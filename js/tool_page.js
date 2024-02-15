@@ -44,11 +44,25 @@ function renderDOM(tools) {
         const toolBox = document.createElement('div');
         toolBox.classList.add('tool-box');
 
+        
+        
         const toolImage = document.createElement('img');
-        console.log(tool.image_url)
         toolImage.src = tool.image_url; // Assuming 'image_URL' property contains the URL of the image
-        //toolImage.alt = tool.image_alt; // Assuming 'image_alt' is the alt text for the image, adjust this based on your backend data
-        toolBox.appendChild(toolImage); 
+        toolImage.addEventListener('click', function() {
+            // Redirect to toolInformation page
+            window.location.href = `toolInformation.html?toolId=${tool.tool_id}`;
+        });
+        toolBox.appendChild(toolImage);
+        
+        
+        
+        
+        
+        // const toolImage = document.createElement('img');
+        // console.log(tool.image_url)
+        // toolImage.src = tool.image_url; // Assuming 'image_URL' property contains the URL of the image
+        // //toolImage.alt = tool.image_alt; // Assuming 'image_alt' is the alt text for the image, adjust this based on your backend data
+        // toolBox.appendChild(toolImage); 
 
         const toolDetails = document.createElement('div');
         toolDetails.classList.add('tool-details');
