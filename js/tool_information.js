@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 async function fetchLocationData(location_id) {
     try {
-        const response = await fetch(`https://communitychest.onrender.com/location/${location_id}`);
+        const response = await fetch(`https://communitychest.onrender.com/locations/${location_id}`);
         const data = await response.json();
         console.log(data)
         return data;
