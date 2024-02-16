@@ -4,58 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Tool</title>
-    <link rel="stylesheet" href="../css/addTool.css">
+    <link rel="stylesheet" href="css/addTool.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="left">
-                <a href="index.html">Home</a>
-            </div>
-            <div class="right">
-                <a href="signUpPage.html">Staff Login</a>
-            </div>
-        </div>
-    </header>
+    <header class="header">
+        <nav class="primary-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="updateTool.html" class="active">Update Existing Tool</a></li>
+            <li><a href="signIn.html">Staff Login</a></li>
+          </ul>
+        </nav>
+      </header>
     <div class="container">
-        <h1>Add a tool</h1>
-        <form id="toolForm">
+        <h1>Add a Tool</h1>
+        <form id="toolForm" class="update-form">
             <div class="form-group">
-                <label for="toolName">Tool name:</label>
+                <label for="toolName">Tool Name</label>
                 <input type="text" id="toolName" name="toolName" required>
             </div>
             <div class="form-group">
-                <label for="toolDescription">Tool description:</label>
+                <label for="toolDescription">Tool Description</label>
                 <input type="text" id="toolDescription" name="toolDescription" required>
             </div>
             <div class="form-group">
-                <label for="location">Location:</label>
+                <label for="location">Location</label>
                 <select id="location" name="location" required>
                     <option value="" disabled selected>Select Location</option>
                     <!-- Populate options dynamically with JavaScript -->
                 </select>
             </div>
             <div class="form-group">
-                <label for="pricePerDay">Borrowing price per day:</label>
-                <input type="number" id="pricePerDay" name="pricePerDay" required>
+                <label for="borrowingPrice">Borrowing Price Per Day</label>
+                <input type="number" id="borrowingPrice" name="borrowingPrice" required>
             </div>
             <div class="form-group">
-                <label for="status">Status:</label>
+                <label for="status">Status</label>
                 <select id="status" name="status" required>
                     <option value="" disabled selected>Select Status</option>
                     <option value="available">Available</option>
-                    <option value="notAvailable">Not Available</option>
+                    <option value="notAvailable">Unavailable</option>
                 </select>
             </div>
             <div class="form-group">
-                <label for="image">Choose an image:</label>
+                <label for="image">Choose an Image</label>
                 <input type="file" id="image" name="image" accept="image/*">
                 <span id="imageName"></span>
             </div>
-            <button type="submit" id="submitBtn">Submit</button>
+            <button type="submit" class="submit-button">Submit</button>
         </form>
     </div>
 
-    <script src="../js/addTool.js"></script>
+    <script src="js/addTool.js"></script>
 </body>
 </html>

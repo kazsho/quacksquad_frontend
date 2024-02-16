@@ -43,6 +43,10 @@ function renderDOM(tools) {
 
         const toolBox = document.createElement('div');
         toolBox.classList.add('tool-box');
+        toolBox.addEventListener('click', function() {
+            // Redirect to toolInformation page
+            window.location.href = `toolInformation.html?toolId=${tool.tool_id}`;
+        });
 
         
         

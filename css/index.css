@@ -168,6 +168,7 @@ form.search-form button {
 .tool-box {
     display: flex;
     gap: 2rem;
+    cursor: pointer;
 }
 
 .tool-details {
