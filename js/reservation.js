@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           try {
               // Send reservation data to the backend endpoint
-              const response = await fetch('http://localhost:3000/reservations', {
+              const response = await fetch('https://communitychest.onrender.com/reservations', {
                   method: 'POST',
                   headers: {
                       'Content-Type': 'application/json'
