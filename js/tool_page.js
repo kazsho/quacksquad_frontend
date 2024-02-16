@@ -1,6 +1,6 @@
-const searchEndpoint = "http://localhost:3000/tools/search?search="
+const searchEndpoint = "https://communitychest.onrender.com/tools/search?search="
 
-const randomEndpoint = "http://localhost:3000/tools/random"
+const randomEndpoint = "https://communitychest.onrender.com/tools/random"
 
 window.addEventListener('load', async function() {
     await fetchRandomData();
