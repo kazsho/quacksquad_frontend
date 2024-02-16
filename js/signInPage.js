@@ -12,7 +12,7 @@ document.getElementById('signup-form').addEventListener('submit', (event) => {
 
   // This pattern is called: Immediately Invoked Function Expression (IIFE)
   (async () => {
-    const response = await fetch('http://localhost:3000/users/login', {
+    const response = await fetch('https://communitychest.onrender.com/users/login', {
       method: "POST",
       headers: {
         'Accept': 'application/json',
