@@ -43,11 +43,16 @@ function renderDOM(tools) {
 
         const toolBox = document.createElement('div');
         toolBox.classList.add('tool-box');
+        toolBox.addEventListener('click', function() {
+            // Redirect to toolInformation page
+            window.location.href = `toolInformation.html?toolId=${tool.tool_id}`;
+        });
 
         
         
         const toolImage = document.createElement('img');
         toolImage.src = tool.image_url; // Assuming 'image_URL' property contains the URL of the image
+        toolImage.classList.add('tool-image');
         toolImage.addEventListener('click', function() {
             // Redirect to toolInformation page
             window.location.href = `toolInformation.html?toolId=${tool.tool_id}`;
@@ -67,24 +72,25 @@ function renderDOM(tools) {
         const toolDetails = document.createElement('div');
         toolDetails.classList.add('tool-details');
 
-        const toolNameElement = document.createElement('div');
+        const toolNameElement = document.createElement('h2');
         toolNameElement.classList.add('tool-name');
         toolNameElement.textContent = tool.tool_name;
         toolDetails.appendChild(toolNameElement);
 
-        const toolStatus = document.createElement('div');
+        const toolStatus = document.createElement('span');
         toolStatus.classList.add('tool-status');
+        toolStatus.classList.add(tool.status.toLowerCase()); 
         toolStatus.textContent = `Status: ${tool.status}`;
         toolDetails.appendChild(toolStatus);
 
-        const toolDescription = document.createElement('div');
+        const toolDescription = document.createElement('p');
         toolDescription.classList.add('tool-description');
         toolDescription.textContent = tool.description;
         toolDetails.appendChild(toolDescription);
 
-        const toolPrice = document.createElement('div');
+        const toolPrice = document.createElement('span');
         toolPrice.classList.add('tool-price');
-        toolPrice.textContent = tool.price_per_day;
+        toolPrice.textContent = "Price per day: £" + tool.price_per_day;  // Price per day: £3.00
         toolDetails.appendChild(toolPrice);
 
         toolBox.appendChild(toolDetails);

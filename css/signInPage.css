@@ -1,78 +1,90 @@
+body,
+input {
+  font-family: 'Overpass', sans-serif;
+}
+
 body {
-    font-family: 'Overpass', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .logo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .logo img {
-    height: 100%;
-    width: 100%;
-  }
-  
-  .signup-form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f8f8f8;
-    padding: 20px;
-    /*font-size: 30px;*/
-  }
-  
-  h1 {
-    color: #F08700;
-    font-family: 'Overpass', sans-serif;
-  }
-  
-  form {
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  input,
-  button {
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  button {
-    background-color: #00A6A6;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  p {
-    margin-top: 10px;
-    color: #F08700;
-  }
-  
-  a {
-    color: #F08700;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  /* height: 100%; */
+  width: 100%;
+}
+
+.signup-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 20px;
+  /*font-size: 30px;*/
+}
+
+h1 {
+  color: #F08700;
+  font-family: 'Overpass', sans-serif;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+}
+
+input,
+button {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #00A6A6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  margin-top: 10px;
+  color: #F08700;
+}
+
+a {
+  color: #F08700;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  background: linear-gradient(to top, #0D2644 0%, #1A3B60 100%);
+}
+
+.logo img {
+  max-width: 60rem;
+}
