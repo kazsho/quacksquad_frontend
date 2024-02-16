@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 async function fetchLocationData(location_id) {
     try {
-        const response = await fetch(`http://localhost:3000/locations/${location_id}`);
+        const response = await fetch(`https://communitychest.onrender.com/${location_id}`);
         const data = await response.json();
         console.log(data)
         return data;
@@ -85,7 +85,7 @@ async function fetchLocationData(location_id) {
 // Function to fetch tool data from the backend using toolId
 async function fetchToolData(toolId) {
     try {
-        const response = await fetch(`http://localhost:3000/tools/${toolId}`);
+        const response = await fetch(`https://communitychest.onrender.com/tools/${toolId}`);
         const data = await response.json();
         return data;
     } catch (error) {
